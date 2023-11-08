@@ -50,16 +50,30 @@ button {
 }
 
 
-@media (max-height: 725px) {
+@media (max-height: 745px) {
     div.to-top {
-      top: 80% !important
+      top: 85% !important
     }
 }
 
 @media(max-width: 1766px) {
   div.movie-list {
     justify-content: space-around !important;
-    margin: 150px !important;
+   
+  }
+  div.movie {
+    margin-left: -10px !important;
+  }
+}
+
+
+@media(max-width: 1348px) {
+  div.movie-list {
+    justify-content: space-around !important;
+   
+  }
+  div.movie {
+    margin-left: 50px !important;
   }
 }
 
