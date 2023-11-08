@@ -64,18 +64,37 @@ button {
   div.movie {
     margin-left: 50px !important;
   }
+ 
+}
+
+
+@media(max-width: 1586px) {
+  div.movie-info {
+    width: 1586px !important;
+  }
 }
 
 
 @media(max-width: 1562px) {
-  
-
   div.movie {
     margin-left: 10px !important;
   }
 }
 
 
+
+@media(max-width: 1280px) {
+  div.movie-list {
+    padding: 50px;
+  }
+}
+
+
+@media(max-width: 863px) {
+  body {
+    width: 863px !important;
+  }
+}
 
 
 </style>
