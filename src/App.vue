@@ -62,19 +62,20 @@ button {
    
   }
   div.movie {
-    margin-left: -10px !important;
-  }
-}
-
-
-@media(max-width: 1348px) {
-  div.movie-list {
-    justify-content: space-around !important;
-   
-  }
-  div.movie {
     margin-left: 50px !important;
   }
 }
+
+
+@media(max-width: 1562px) {
+  
+
+  div.movie {
+    margin-left: 10px !important;
+  }
+}
+
+
+
 
 </style>
