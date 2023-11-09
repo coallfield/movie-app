@@ -64,6 +64,14 @@ button {
   div.movie {
     margin-left: 50px !important;
   }
+ 
+}
+
+
+@media(max-width: 1586px) {
+  div.movie-info {
+    width: 1586px !important;
+  }
 }
 
 
@@ -78,6 +86,7 @@ button {
     height: 700px;
   }
 }
+
 
 
 
@@ -96,6 +105,14 @@ button {
   }
 }
 
+@media(max-width: 1280px) {
+  div.movie-list {
+    padding: 50px;
+
+  }
+}
+
+
 
 @media(max-width: 1248px) {
  
@@ -111,6 +128,14 @@ button {
    height: 430px !important;
  }
 
+}
+
+
+
+@media(max-width: 863px) {
+  body {
+    width: 863px !important;
+  }
 }
 
 
