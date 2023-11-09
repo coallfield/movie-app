@@ -1,5 +1,6 @@
 <template>
     <div class="movie-info">
+        <div class="not-full-photo">
         <div class="title-info">
             <h1 class="title">{{ currentFilm.nameRu }}</h1>
             <div class="genres">
@@ -7,6 +8,7 @@
             </div>
         </div>
         <MainMovieInfo :moviePhotos=moviePhotos :currentFilm="currentFilm"></MainMovieInfo>
+    </div>
         <div @click="$store.commit('photoVisible')" v-if="$store.state.isPhoto" class="full-photo-wrapper">
             <img @click.stop :src="$store.state.currentPhoto" class="full-photo">
         </div>

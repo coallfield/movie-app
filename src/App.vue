@@ -68,13 +68,50 @@ button {
 
 
 @media(max-width: 1562px) {
-  
-
   div.movie {
-    margin-left: 10px !important;
+    margin-left: 0px !important;
+  }
+  div.not-full-photo {
+    scale: 90%;
+    margin-left: -100px;
+    margin-top: -80px;
+    height: 700px;
   }
 }
 
+
+
+@media(max-width: 1352px) {
+ 
+  div.not-full-photo {
+    scale: 85%;
+    margin-left: -150px;
+    margin-top: -100px;
+    height: 700px;
+  }
+  
+  .full-photo {
+    width: 620px !important;
+    height: 430px !important;
+  }
+}
+
+
+@media(max-width: 1248px) {
+ 
+ div.not-full-photo {
+   scale: 75%;
+   margin-left: -190px;
+   margin-top: -130px;
+   height: 700px;
+ }
+ 
+ .full-photo {
+   width: 620px !important;
+   height: 430px !important;
+ }
+
+}
 
 
 
