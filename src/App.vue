@@ -84,6 +84,11 @@ button {
     margin-left: -100px;
     margin-top: -80px;
     height: 700px;
+    
+  }
+
+  body {
+    overflow-x: hidden !important;
   }
 }
 
