@@ -179,8 +179,18 @@ button {
   .movie {
     scale: 80%;
   }
+  .movie:hover {
+    scale: 81% !important;
+  }
   .poster {
     object-fit: contain;
+  }
+  .skeleton-movie-card {
+     scale: 80%
+  }
+  .skeleton-container {
+    grid-gap: 1px !important;
+    margin-top: 0px !important;
   }
 }
 
