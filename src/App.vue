@@ -66,7 +66,7 @@ button {
   
     flex-direction: row;
     display: flex;
-
+    overflow: hidden;
     justify-content: center;
     align-items: center;
   }
@@ -152,6 +152,7 @@ button {
   .movie {
     margin-left: 0px !important;
   }
+  
 
   
 }
@@ -160,6 +161,26 @@ button {
 @media(max-width: 1000px) {
   .shots-wrapper {
     scale: 90%;
+  }
+}
+@media(max-width: 600px) {
+    .find-movie {
+      width: 400px !important;
+    }
+}
+@media (max-width: 500px) {
+  .find-movie {
+    width: 200px !important;
+  }
+  .movie-list {
+    grid-gap: 1px !important;
+    margin-top: 0px !important;
+  }
+  .movie {
+    scale: 80%;
+  }
+  .poster {
+    object-fit: contain;
   }
 }
 

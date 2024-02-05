@@ -1,6 +1,5 @@
 <template>
     <div>     
-        <LoadAttention v-if="isLoading"></LoadAttention>
         <div v-if="!isLoaded" class="attention"><h1>Произошла ошибка</h1> </div> 
         <MyMain :isLoading="isLoading" :isLoaded="isLoaded"></MyMain>
         <div ref="observer" class="observer"></div>
@@ -15,7 +14,7 @@
   import ScrollButton from '@/components/ScrollButton.vue'
   import LoadAttention from '@/components/LoadAttention.vue'
   export default {
-    components: { MyMain, ScrollButton, LoadAttention },
+    components: { MyMain, ScrollButton, LoadAttention},
     data() {
       return {
         url: `https://kinopoiskapiunofficial.tech/api/v2.2/films?order=NUM_VOTE&type=FILM&ratingFrom=5&ratingTo=10&yearFrom=1000&yearTo=3000`,

@@ -1,19 +1,22 @@
 <template>
   <main>
-    <div v-if="isLoaded && !isLoading"  class="main-wrapper">
+    <div   class="main-wrapper">
       <div class="sort-settings">
         <div class="input-wrap">
           <input @input="getByName($event)"
             placeholder="Введите название..." class="find-movie">
         </div>
       </div>
-      <MovieCard :movies="$store.state.movies"></MovieCard>
+      <SkeletonMovieCard  v-if="isLoading"></SkeletonMovieCard>
+      <MovieCard :movies="$store.state.movies" v-if="isLoaded && !isLoading"></MovieCard>
     </div>
   </main>
 </template>
 
 <script>
+import SkeletonMovieCard from '@/components/UI/SkeletonMovieCard.vue'
 export default {
+  components: {SkeletonMovieCard},
   props: {
     isLoaded: {
       type: Boolean
@@ -54,12 +57,17 @@ export default {
   margin-top: 50px;
 }
 
+.input-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .find-movie {
   padding-left: 20px;
   color: white;
-  margin-left: 180px;
   height: 50px;
   width: 520px;
+ 
   border-radius: 25px;
   border: 1px solid #ACB4DF;
   background-color: #24273A;

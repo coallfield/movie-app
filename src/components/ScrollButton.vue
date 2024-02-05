@@ -19,8 +19,8 @@ export default {
 <style scoped>
 
 .to-top {
-  top:90%;
-  left: 94%;
+  bottom: 3%;
+  right: 3%;
   position: fixed;
   width: 70px;
   height: 70px;

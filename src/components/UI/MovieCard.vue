@@ -71,17 +71,17 @@ export default {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
+  justify-content: center;
+  grid-gap: 160px;
+  margin-top: 40px;
 }
 
 .movie {
     width: 400px;
     height: 700px;
     box-shadow: 2px 2px 30px #ACB4DF;
-    margin-left: 180px;
-    margin-top: 40px;
     background-color: #24273A;
-    
+
     transition: 0.3s ease;
 }
 
@@ -130,7 +130,7 @@ export default {
 }
 
 .title {
-  margin-top: 10px;
+ 
   color: #C9CDDF;
   display: flex;
   flex-direction: row;
