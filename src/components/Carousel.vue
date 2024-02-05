@@ -88,7 +88,7 @@ export default {
     height: 30px;
     filter: invert(50%);
     transition: ease 0.5s;
-    
+ 
 }
 
 .arrow:hover {

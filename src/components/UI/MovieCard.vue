@@ -8,7 +8,8 @@
                 
             </div>
             <div class="main-info">
-                <div class="title">
+                <div class="title-rate-container">
+                    <div class="title">
                     <h3 v-if="movie.nameRu.length <= 22">{{ movie.nameRu }}</h3>
                     <h3 v-else>{{ movie.nameRu.split('').splice(null, 22).join('') + '...' }}</h3>
                 </div>
@@ -16,17 +17,19 @@
                     <p>☆</p>
                     <p>{{ movie.ratingImdb || movie.rating}}</p>
                 </div>
+                </div>
+                
                 
             </div>
-            <div v-if="this.$route.path === '/'" class="settings-btns">
-                <div class="late-about">
-                    <DelayButton :film="movie"></DelayButton>
+            <div class="settings-btns">
+                <div  class="late-about">
+                    <DelayButton  v-if="this.$route.path === '/'" :film="movie"></DelayButton>
                     <div class="about">
                         <button @click="$router.push({ path: `/about/${movie.kinopoiskId || movie.filmId}`, params: movie.kinopoiskId || movie.filmId })"
                             id="about">ПОДРОБНЕЕ</button>
                     </div>
                 </div>
-                <div  class="fav-btn">
+                <div v-if="this.$route.path === '/'"  class="fav-btn">
                     <FavouriteButton :film="movie"></FavouriteButton>
                 </div>
             </div>
@@ -78,7 +81,7 @@ export default {
     margin-left: 180px;
     margin-top: 40px;
     background-color: #24273A;
-    border-radius: 20px;
+    
     transition: 0.3s ease;
 }
 
@@ -91,6 +94,8 @@ export default {
   height: 600px;
   overflow-y: hidden;
   position: relative;
+
+ 
 }
 
 .delete {
@@ -160,6 +165,13 @@ export default {
 #about:hover {
  scale: 105%;
  color: #bf6470;
+}
+
+.title-rate-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
 }
 
 </style>

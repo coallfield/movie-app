@@ -35,6 +35,7 @@ export default {
         display: flex;
         flex-direction: row;
     } 
+    
     .poster {
         height: 600px;
         width: 400px;

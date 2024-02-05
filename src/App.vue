@@ -50,98 +50,119 @@ button {
 }
 
 
-@media (max-height: 745px) {
-    div.to-top {
-      top: 85% !important
-    }
-}
 
-@media(max-width: 1766px) {
-  div.movie-list {
-    justify-content: space-around !important;
-   
+
+
+
+
+@media(max-width: 1100px) {
+  div.main-info {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column !important;
   }
-  div.movie {
-    margin-left: 50px !important;
-  }
- 
-}
 
-
-@media(max-width: 1586px) {
   div.movie-info {
-    width: 1586px !important;
+  
+    flex-direction: row;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
   }
-}
-
-
-@media(max-width: 1562px) {
-  div.movie {
+  .movie-poster {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+  }
+  img.poster {
     margin-left: 0px !important;
   }
-  div.not-full-photo {
-    scale: 90%;
-    margin-left: -100px;
-    margin-top: -80px;
-    height: 700px;
-    
+  div.settings-btns {
+    margin-left: 0px !important;
+  }
+  div.detailed-info {
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px !important;
+  }
+  div.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .descr {
+    text-align: center;
+  }
+  .title-info {
+      display:  flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+    }
+    .title {
+      margin: 0 !important;
+    }
+    .genres {
+      margin: 0 !important;
+    }
+  .genres {
+    display: flex;
+    justify-content: center;
+  }
+  .shots-wrapper {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+    align-items: center;
+  }
+  .slider-btns {
+    width: 100% !important;
+    justify-content: center;
+    align-items: center;
+    margin-left: -2px !important;
+  }
+  .reviews {
+    margin-top: 30px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .review-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .review {
+    text-align: center;
+  }
+  .reviews-btns {
+    grid-gap: 30px
+  }
+  .movie-list  {
+    justify-content: center;
+    grid-gap: 30px
+  }
+  .movie {
+    margin-left: 0px !important;
   }
 
-  body {
-    overflow-x: hidden !important;
-  }
-}
-
-
-
-
-@media(max-width: 1352px) {
- 
-  div.not-full-photo {
-    scale: 85%;
-    margin-left: -150px;
-    margin-top: -100px;
-    height: 700px;
-  }
   
-  .full-photo {
-    width: 620px !important;
-    height: 430px !important;
+}
+
+
+@media(max-width: 1000px) {
+  .shots-wrapper {
+    scale: 90%;
   }
 }
 
-@media(max-width: 1280px) {
-  div.movie-list {
-    padding: 50px;
-
-  }
-}
-
-
-
-@media(max-width: 1248px) {
- 
- div.not-full-photo {
-   scale: 75%;
-   margin-left: -190px;
-   margin-top: -130px;
-   height: 700px;
- }
- 
- .full-photo {
-   width: 620px !important;
-   height: 430px !important;
- }
-
-}
-
-
-
-@media(max-width: 863px) {
-  body {
-    width: 863px !important;
-  }
-}
 
 
 

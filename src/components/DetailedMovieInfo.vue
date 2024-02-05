@@ -70,6 +70,7 @@ export default {
                 this.reviews.forEach(review => {
                     review.description = review.description.replace(/(<([^>]+)>)/gi, '');
                 })
+                
                 if(data.totalPages < 10) {
                     this.totalPages = data.totalPages
                 }
@@ -84,6 +85,7 @@ export default {
     },
     created() {
         this.fetchReviews()
+        
     }
 }
 </script>
@@ -110,12 +112,16 @@ export default {
 
 .reviews {
     max-width: 900px;
+ 
 }
 
 
+
 .review-data {
+    
     margin-top: 30px;
     transition: ease 0.5s;
+    cursor: pointer;
 }
 
 .review-data:hover {
@@ -165,6 +171,7 @@ export default {
     scale: 120%;
     color:#bf6470;
 }
+
 
 
 </style>

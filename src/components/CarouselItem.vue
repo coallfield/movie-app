@@ -22,13 +22,19 @@ export default {
 </script>
 
 <style scoped>
+
+
 .item {
     margin-left: 10px;
     width: 230px;
     height: 141px;
+    object-fit: cover;
     border-radius: 5px;
     border: 1px solid white;;
     transition: ease 0.5s;
+    cursor: pointer;
+    
+    
 }
 
 
