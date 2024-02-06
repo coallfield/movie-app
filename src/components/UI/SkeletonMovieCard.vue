@@ -19,7 +19,7 @@
 }
 .skeleton-movie-card {
     width: 400px;
-    height: 700px;
+    height: 600px;
     box-shadow: 2px 2px 30px #ACB4DF;
     background-color: #24273A;
     animation-name: flashing;

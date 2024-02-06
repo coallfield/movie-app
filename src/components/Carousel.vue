@@ -58,6 +58,7 @@ export default {
     margin-top: 10px;
     width: 1000px;
     overflow-x: hidden;
+   
 }
 .car-wrapper {
     transition: 0.5s ease;
@@ -65,9 +66,8 @@ export default {
     flex-direction: row;
     grid-gap: 10px;
     margin-top: 5px;
-    
-    width: 1000px;
     height: 150px;  
+    
 }
 
 

@@ -1,22 +1,27 @@
 <template>
-    <div class="main-info">
-            <div class="movie-poster">
-                <img class="poster" :src="currentFilm.posterUrl">
-                <div class="settings-btns">
-                    <FavouriteButton :film="currentFilm" style="margin-top: 0;"></FavouriteButton>
-                    <DelayButton :film="currentFilm"></DelayButton>
-                    <button @click="this.$router.push('/')" class="back-btn">На главную</button>
-                </div>
+    <div class="main-info-container">
+        <div class="main-info">
+        <div class="movie-poster">
+            <img class="poster" :src="currentFilm.posterUrl">
+            <div class="settings-btns">
+                <FavouriteButton :film="currentFilm" style="margin-top: 0;"></FavouriteButton>
+                <DelayButton :film="currentFilm"></DelayButton>
+                <button @click="this.$router.push('/')" class="back-btn">На главную</button>
             </div>
-            <DetailedMovieInfo :currentFilm="currentFilm" :photos="moviePhotos"></DetailedMovieInfo>
-            
         </div>
+        <DetailedMovieInfo :currentFilm="currentFilm" :photos="moviePhotos"></DetailedMovieInfo>
+        
+    </div>
+    <Reviews></Reviews>
+    </div>
+    
 </template>
 
 <script>
 import DetailedMovieInfo from '@/components/DetailedMovieInfo.vue'
+import Reviews from '@/components/Reviews.vue';
 export default {   
-    components: {DetailedMovieInfo},
+    components: { DetailedMovieInfo, Reviews },
     props: {
         currentFilm: {
             type: Object,
@@ -31,9 +36,15 @@ export default {
 </script>
 
 <style scoped>
+.main-info-container{
+        display: flex;
+        flex-direction: column
+       
+    } 
 .main-info{
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
     } 
     
     .poster {
@@ -87,4 +98,6 @@ export default {
         
     }
 
+
+   
 </style>

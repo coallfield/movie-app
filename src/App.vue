@@ -52,10 +52,7 @@ button {
 
 
 
-
-
-
-@media(max-width: 1100px) {
+@media(max-width: 1510px) {
   div.main-info {
     justify-content: center;
     align-items: center;
@@ -132,6 +129,7 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-left: 0px !important;
   }
   .review-data {
     display: flex;
@@ -141,6 +139,7 @@ button {
   }
   .review {
     text-align: center;
+   
   }
   .reviews-btns {
     grid-gap: 30px
@@ -158,7 +157,11 @@ button {
 }
 
 
-@media(max-width: 1000px) {
+@media(max-width: 1090px) {
+  .reviews {
+    width: 900px;
+    margin-top: -10px !important;
+  }
   .shots-wrapper {
     scale: 90%;
   }
@@ -173,27 +176,46 @@ button {
     width: 200px !important;
   }
   .movie-list {
-    grid-gap: 1px !important;
+    grid-gap: 30px !important;
     margin-top: 0px !important;
   }
   .movie {
-    scale: 80%;
+    scale: 90%;
+   
   }
   .movie:hover {
-    scale: 81% !important;
+    scale: 91% !important;
   }
   .poster {
     object-fit: contain;
   }
   .skeleton-movie-card {
-     scale: 80%
+     scale: 90%
   }
   .skeleton-container {
-    grid-gap: 1px !important;
+    grid-gap: 30px !important;
     margin-top: 0px !important;
+  }
+  .nav-btns {
+    justify-content: center !important;
+    margin-left: 0px !important;
   }
 }
 
+@media (max-width: 940px) {
+  .reviews {
+    width: 700px;
+  }
+  
+ 
+}
+
+@media (max-width: 770px) {
+  .reviews {
+    width: 600px;
+  }
+  
+}
 
 
 

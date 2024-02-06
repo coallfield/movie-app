@@ -7,31 +7,19 @@
                 <div @click="deleteMovie(movie)" v-if="this.$route.path !== '/'" class="delete"><img class="delete-button" src="@\img\delete.png"></div>    
                 
             </div>
-            <div class="main-info">
+            <div class="movie-small-info">
+                <div class="main-info">
                 <div class="title-rate-container">
                     <div class="title">
                     <h3 v-if="movie.nameRu.length <= 22">{{ movie.nameRu }}</h3>
                     <h3 v-else>{{ movie.nameRu.split('').splice(null, 22).join('') + '...' }}</h3>
                 </div>
                 <div class="title rate">
-                    <p>☆</p>
+                    <p>Рейтинг:</p>
                     <p>{{ movie.ratingImdb || movie.rating}}</p>
                 </div>
-                </div>
-                
-                
+                </div>   
             </div>
-            <div class="settings-btns">
-                <div  class="late-about">
-                    <DelayButton  v-if="this.$route.path === '/'" :film="movie"></DelayButton>
-                    <div class="about">
-                        <button @click="$router.push({ path: `/about/${movie.kinopoiskId || movie.filmId}`, params: movie.kinopoiskId || movie.filmId })"
-                            id="about">ПОДРОБНЕЕ</button>
-                    </div>
-                </div>
-                <div v-if="this.$route.path === '/'"  class="fav-btn">
-                    <FavouriteButton :film="movie"></FavouriteButton>
-                </div>
             </div>
         </div>
 
@@ -78,7 +66,7 @@ export default {
 
 .movie {
     width: 400px;
-    height: 700px;
+    height: 600px;
     box-shadow: 2px 2px 30px #ACB4DF;
     background-color: #24273A;
 
@@ -89,6 +77,12 @@ export default {
   box-shadow: 2px 2px 40px white; scale: 105%;
 }
 
+.movie-small-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    width: 100%;
+}
 
 .poster-img {
   height: 600px;
@@ -121,12 +115,9 @@ export default {
 }
 
 .main-info {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items:flex-start;
-  padding: 0px 20px;
-  height: 10px;
+  height: 50%;
+
+  
 }
 
 .title {
@@ -139,7 +130,7 @@ export default {
 }
 
 .settings-btns {
- 
+
  display: flex;
  justify-content: space-between;
  align-items: center;
@@ -148,11 +139,7 @@ export default {
 .late-about {
  
  display: flex;
- flex-direction: row;
- align-items: center;
- margin-top: 35px;
- grid-gap: 10px;
- margin-left: 15px;
+
  
  
 }
@@ -168,10 +155,17 @@ export default {
 }
 
 .title-rate-container {
+
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
+    grid-gap:3px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+   
 }
+
+
+
 
 </style>
