@@ -180,17 +180,17 @@ button {
     margin-top: 0px !important;
   }
   .movie {
-    scale: 90%;
+    scale: 80%;
    
   }
   .movie:hover {
-    scale: 91% !important;
+    scale: 81% !important;
   }
   .poster {
     object-fit: contain;
   }
   .skeleton-movie-card {
-     scale: 90%
+     scale: 80% !important
   }
   .skeleton-container {
     grid-gap: 30px !important;
